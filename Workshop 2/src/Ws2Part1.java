@@ -9,7 +9,7 @@ public class Ws2Part1 {
             try {
                 int num;
                 Scanner sc = new Scanner(System.in);
-                System.out.println("Enter number: ");
+                System.out.println("Enter number(>= 1): ");
                 num = sc.nextInt();
                 if (num < 1) {
                     throw new Exception();
@@ -17,7 +17,7 @@ public class Ws2Part1 {
                 System.out.println("The number is " + num);
                 cont = false;
             } catch (Exception e) {
-                System.out.println("The number is invalid");
+                System.out.println("Invalid input");
                 cont = true;
             }
         } while (cont);
