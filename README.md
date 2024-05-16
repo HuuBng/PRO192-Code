@@ -10,7 +10,10 @@ TBA
 
 # Naming scheme
 
-TBA
+Ws(x)Part(y)_(z) = workshop x part y (optional z)
+
+ex: Ws1Part1_test = workshop 1 part 1 test
+
 
 # Operating system / Tools
 
