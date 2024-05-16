@@ -2,10 +2,11 @@
 import java.util.Scanner;
 
 public class Ws1Part5_FractionDemo {
+
     public static void main(String[] args) {
         int a, b, c, d;
         Scanner sc = new Scanner(System.in);
-        
+
         // Input numerator and denominator of fractions
         System.out.print("Enter numerator of the first fraction: ");
         a = sc.nextInt();

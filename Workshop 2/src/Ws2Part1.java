@@ -2,19 +2,21 @@
 import java.util.Scanner;
 
 public class Ws2Part1 {
+
     public static void main(String[] args) {
         boolean cont = false;
         do {
-            try{
+            try {
                 int num;
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Enter number: ");
                 num = sc.nextInt();
-                if(num < 1)
+                if (num < 1) {
                     throw new Exception();
-                System.out.println("The number is "+ num);
+                }
+                System.out.println("The number is " + num);
                 cont = false;
-            }catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println("The number is invalid");
                 cont = true;
             }

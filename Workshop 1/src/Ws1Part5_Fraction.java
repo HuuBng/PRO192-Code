@@ -1,11 +1,13 @@
 
 public class Ws1Part5_Fraction {
+
     private int numerator;
     private int denominator;
-    
+
     public Ws1Part5_Fraction() {
         this(0, 1);
     }
+
     public Ws1Part5_Fraction(int numerator, int denominator) {
         if (denominator == 0) {
             throw new IllegalArgumentException("Denominator cannot be zero.");
@@ -14,6 +16,7 @@ public class Ws1Part5_Fraction {
         this.denominator = denominator;
         simplifyFraction();
     }
+
     // Getters and Setters
     public int getNumerator() {
         return numerator;
@@ -35,6 +38,7 @@ public class Ws1Part5_Fraction {
         this.denominator = denominator;
         simplifyFraction();
     }
+
     // Greatest Common Divisor (GCD) Calculation
     private int findGCD(int a, int b) {
         a = Math.abs(a);
@@ -60,27 +64,27 @@ public class Ws1Part5_Fraction {
     public Ws1Part5_Fraction addFraction(Ws1Part5_Fraction other) {
         int newNumerator = numerator * other.denominator + other.numerator * denominator;
         int newDenominator = denominator * other.denominator;
-        return new Ws1Part5_Fraction(newNumerator, newDenominator); 
+        return new Ws1Part5_Fraction(newNumerator, newDenominator);
     }
-    
+
     public Ws1Part5_Fraction subFraction(Ws1Part5_Fraction other) {
         int newNumerator = numerator * other.denominator - other.numerator * denominator;
         int newDenominator = denominator * other.denominator;
-        return new Ws1Part5_Fraction(newNumerator, newDenominator); 
+        return new Ws1Part5_Fraction(newNumerator, newDenominator);
     }
-    
+
     public Ws1Part5_Fraction mulFraction(Ws1Part5_Fraction other) {
         int newNumerator = numerator * other.numerator;
         int newDenominator = denominator * other.denominator;
-        return new Ws1Part5_Fraction(newNumerator, newDenominator); 
+        return new Ws1Part5_Fraction(newNumerator, newDenominator);
     }
-        
+
     public Ws1Part5_Fraction divFraction(Ws1Part5_Fraction other) {
         int newNumerator = numerator * other.denominator;
         int newDenominator = denominator * other.numerator;
-        return new Ws1Part5_Fraction(newNumerator, newDenominator); 
+        return new Ws1Part5_Fraction(newNumerator, newDenominator);
     }
-    
+
     // Output
     public void output() {
         System.out.println(numerator + "/" + denominator);

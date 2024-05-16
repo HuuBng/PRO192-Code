@@ -1,10 +1,10 @@
 
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
 public class Ws2Part4 {
+
     public static Scanner sc = new Scanner(System.in);
-    
+
     public static String inputNonBlankStr(String msg) {
         System.out.print(msg);
         String str = sc.nextLine();
@@ -18,7 +18,7 @@ public class Ws2Part4 {
     public static int inputInt(String msg) {
         System.out.print(msg);
         int num = sc.nextInt();
-        while(num <= 0) {
+        while (num <= 0) {
             System.out.println("Please enter a positive number!");
             num = sc.nextInt();
         }
@@ -27,10 +27,10 @@ public class Ws2Part4 {
 
     public static boolean inputBoolean(String msg) {
         System.out.print(msg);
-        while (true) { 
+        while (true) {
             if (sc.hasNextBoolean()) {
                 boolean bool = sc.nextBoolean();
-                sc.nextLine(); 
+                sc.nextLine();
                 return bool;
             } else {
                 System.out.println("Please enter TRUE or FALSE!");
@@ -46,18 +46,18 @@ public class Ws2Part4 {
         String colour = inputNonBlankStr("Enter colour: ");
         int enginePower = 0;
         boolean cont = false;
-        do{
-            try{
+        do {
+            try {
                 enginePower = inputInt("Enter engine power: ");
                 cont = false;
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Please enter a number!");
                 cont = true;
             }
-        }while(cont);
+        } while (cont);
         boolean convertible = inputBoolean("Enter convertible (TRUE/FALSE): ");
         boolean parkingBrake = inputBoolean("Enter parking brake (TRUE/FALSE): ");
-        System.out.println("Vehicle Information: " + VIN + " " + model+ " " + brand + " " + colour + " " + enginePower + " " + convertible + " " + parkingBrake);
+        System.out.println("Vehicle Information: " + VIN + " " + model + " " + brand + " " + colour + " " + enginePower + " " + convertible + " " + parkingBrake);
 
     }
 }
