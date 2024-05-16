@@ -5,7 +5,9 @@ public class Ws1Part5_Fraction {
     private int denominator;
 
     public Ws1Part5_Fraction() {
-        this(0, 1);
+//        this(0, 1);
+           this.numerator = 0;
+           this.denominator = 1;
     }
 
     public Ws1Part5_Fraction(int numerator, int denominator) {
