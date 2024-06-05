@@ -11,8 +11,7 @@ public class Main {
         System.out.println("1. Test f1()");
         System.out.println("2. Test f2()");
         System.out.print("Enter TC (1 or 2): ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        int choice = Integer.parseInt(sc.nextLine());
         System.out.println("Enter a string: ");
         String str = sc.nextLine().toLowerCase().trim();
         MyPolymorphism myPoly = new MyPolymorphism();

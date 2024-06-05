@@ -18,9 +18,9 @@ public class MyPolymorphism implements IPolymorphism {
     @Override
     public String f2(String str) {
         String s;
+        String sPattern = "[a-z0-9]+\\d{2,}[a-z0-9]*";
         String strReplace = "XYZ";
-        Matcher wordMatcher = Pattern.compile("[a-zA-Z]\\d{2,}").matcher(str);
-        s = str.replaceAll("[a-z]\\d{2,}", strReplace);
+        s = str.replaceAll(sPattern, strReplace);
         return s;
     }
 }
