@@ -20,7 +20,7 @@ public class MyPolymorphism implements IPolymorphism {
     @Override
     public void f2(String str) {
         String s;
-        String sPattern = "[a-z0-9]*[2468]+[a-z0-9]*";
+        String sPattern = "\\w*[2468]+\\w*";
         String sReplace = "ABC";
         s = str.replaceAll(sPattern, sReplace);
         System.out.println(s);
