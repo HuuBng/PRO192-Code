@@ -7,15 +7,11 @@ public class MyPolymorphism implements IPolymorphism {
 
     @Override
     public void f1(String str) {
-        String[] s = str.split(" ");
-        for (String sx : s) {
-            char[] c = sx.toCharArray();
-            int icount = 0;
-            for (char cx : c) {
-                icount += (Character.isDigit(cx) && cx % 2 == 0) ? 1 : 0;
-            }
-            if (icount >= 1) {
-                System.out.print(sx + " ");
+        String[] s = str.split("");
+        Matcher evenDigit = Pattern.compile("\\b\\w*[2468]+\\w*\\b").matcher(str);
+        while (evenDigit.find()) {
+            for (int i = evenDigit.start(); i < evenDigit.end(); i++) {
+                System.out.print(s[i] + " ");
             }
         }
     }
