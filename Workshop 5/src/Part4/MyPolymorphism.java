@@ -11,8 +11,9 @@ public class MyPolymorphism implements IPolymorphism {
         Matcher evenDigit = Pattern.compile("\\b\\w*[2468]+\\w*\\b").matcher(str);
         while (evenDigit.find()) {
             for (int i = evenDigit.start(); i < evenDigit.end(); i++) {
-                System.out.print(s[i] + " ");
+                System.out.print(s[i]);
             }
+            System.out.print(" ");
         }
     }
 
