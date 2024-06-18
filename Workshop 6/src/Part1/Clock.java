@@ -59,7 +59,7 @@ public class Clock extends Item {
 
     @Override
     public String toString() {
-        return super.getCode() + ", " + super.getMake() + ", " + size + ", " + price;
+        return this.getCode() + ", " + this.getMake() + ", " + this.getSize() + ", " + this.getPrice();
     }
 
 }
