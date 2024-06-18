@@ -37,6 +37,8 @@ public class ClockList extends Clock implements I_List {
             br.close();
         } catch (IOException e) {
             System.out.println("Error reading file: " + fName);
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
@@ -58,6 +60,8 @@ public class ClockList extends Clock implements I_List {
             }
 
             bw.close();
+        } catch (IOException e) {
+            System.out.println("Error writing file: " + fName);
         } catch (Exception e) {
             System.out.println(e);
         }

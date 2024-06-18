@@ -37,8 +37,10 @@ public class TShirtList extends TShirt implements I_List {
                 list.add(ts);
 
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("Error reading file: " + fName);
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
@@ -61,6 +63,8 @@ public class TShirtList extends TShirt implements I_List {
 
             bw.close();
 
+        } catch (IOException e) {
+            System.out.println("Error writing file: " + fName);
         } catch (Exception e) {
             System.out.println(e);
         }
