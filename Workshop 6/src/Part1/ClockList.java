@@ -120,7 +120,7 @@ public class ClockList extends Clock implements I_List {
     public Clock findClockWithMaxPrice() {
         //    Your code is here!
 
-        int maxPrice = 0;
+        int maxPrice = list.get(0).getPrice();
         Clock maxClock = new Clock();
 
         for (Clock clock : list) {
