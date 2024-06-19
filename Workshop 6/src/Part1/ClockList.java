@@ -130,9 +130,7 @@ public class ClockList extends Clock implements I_List {
             }
         }
 
-        System.out.println(maxClock);
-
-        return null;
+        return maxClock;
     }
 
     @Override
@@ -149,8 +147,7 @@ public class ClockList extends Clock implements I_List {
             }
         }
 
-        System.out.println(minClock);
-        return null;
+        return minClock;
     }
 
     @Override
@@ -171,7 +168,7 @@ public class ClockList extends Clock implements I_List {
         tList.sort(new Comparator<Clock>() {
             @Override
             public int compare(Clock c1, Clock c2) {
-                return c1.getPrice() > c2.getPrice() ? 1 : -1;
+                return Integer.compare(c1.getPrice(), c2.getPrice());
             }
         });
 
