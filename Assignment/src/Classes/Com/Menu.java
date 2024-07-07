@@ -22,7 +22,7 @@ public class Menu {
         int N = brands.size();
 
         for (int i = 0; i < N; i++) {
-            System.out.println((i + 1) + " " + brands.get(i));
+            System.out.println((i + 1) + ". " + brands.get(i));
         }
         System.out.print("Please choose an option: 1..." + N + ": ");
 

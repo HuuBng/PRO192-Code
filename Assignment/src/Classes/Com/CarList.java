@@ -169,7 +169,6 @@ public class CarList extends ArrayList<Car> {
             System.err.println("ID not found!!!");
             return false;
         } else {
-
             this.remove(pos);
         }
 
@@ -199,7 +198,7 @@ public class CarList extends ArrayList<Car> {
         } while (tColor.length() < 1);
 
         String tFrame;
-        Pattern framePat = Pattern.compile("F\\d{4,}");
+        Pattern framePat = Pattern.compile("F\\w{4,}");
         do {
             System.out.print("Enter frameID: ");
             tFrame = sc.nextLine().trim().toUpperCase();
@@ -215,7 +214,7 @@ public class CarList extends ArrayList<Car> {
         } while (!framePat.matcher(tFrame).matches() || this.searchFrame(tFrame) != -1);
 
         String tEngine;
-        Pattern enginePat = Pattern.compile("E\\d{4,}");
+        Pattern enginePat = Pattern.compile("E\\w{4,}");
         do {
             System.out.print("Enter engineID: ");
             tEngine = sc.nextLine().trim().toUpperCase();
