@@ -56,7 +56,7 @@ public class Brand {
     // Others
     @Override
     public String toString() {
-        return this.getBrandID() + ", " + this.getBrandName() + ", " + this.getSoundBrand() + ": " + this.getPrice();
+        return this.getBrandID() + ", " + this.getBrandName() + ", " + this.getSoundBrand() + ": " + String.format("%.3f", this.getPrice());
     }
 
 }
