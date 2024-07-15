@@ -21,6 +21,7 @@ public class Menu {
 
         int N = brands.size();
 
+        System.out.println("------| Please select |------");
         for (int i = 0; i < N; i++) {
             System.out.println((i + 1) + ". " + brands.get(i));
         }
