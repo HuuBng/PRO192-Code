@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Book extends Item implements Comparable<Book> {
     //    Your code is here!
 
-    // Files
+    // Fields
     private String name;
     private int year;
 
